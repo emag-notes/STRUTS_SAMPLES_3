@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+  "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="VariousInputForm" type="action.form.VariousInputForm"/>
+  </form-beans>
+
+  <action-mappings>
+    <action type="action.VariousInputAction" path="/VariousInput">
+      <forward name="various-input" path="/WEB-INF/view/various-input.jsp"/>
+    </action>
+    <action name="VariousInputForm" type="action.ResultAction" path="/Result" scope="session">
+      <forward name="result" path="/WEB-INF/view/result.jsp"/>
+    </action>
+  </action-mappings>
+  <message-resources parameter="ApplicationResource"/>
+</struts-config>
