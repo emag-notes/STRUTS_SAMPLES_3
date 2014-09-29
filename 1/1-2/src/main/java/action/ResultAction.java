@@ -13,8 +13,13 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class ResultAction extends Action {
 
+  private static final String CANCEL = "isCancel";
+
   public ActionForward execute(ActionMapping mapping, ActionForm form,
                                HttpServletRequest request, HttpServletResponse response) throws Exception {
+    if (isCancelled(request)) {
+      request.setAttribute(CANCEL, true);
+    }
     return mapping.findForward("result");
   }
 }

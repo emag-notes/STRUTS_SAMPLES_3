@@ -12,7 +12,7 @@
     </action>
     <action name="VariousInputForm" type="action.ResultAction" path="/Result" scope="request">
       <!--<html:cancel>の脆弱性によるExceptionの発生を抑制する（Struts1.2.9）-->
-      <!--<set-property property="cancellable" value="true"/>-->
+      <set-property property="cancellable" value="true"/>
       <forward name="result" path="/WEB-INF/view/result.jsp"/>
     </action>
   </action-mappings>
