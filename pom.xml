@@ -39,6 +39,11 @@
       <version>${version.struts}</version>
     </dependency>
     <dependency>
+      <groupId>org.apache.struts</groupId>
+      <artifactId>struts-extras</artifactId>
+      <version>${version.struts}</version>
+    </dependency>
+    <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
       <version>3.0.1</version>
